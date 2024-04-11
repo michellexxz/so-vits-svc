@@ -269,7 +269,7 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
         global start_time
         now = time.time()
         durtaion = format(now - start_time, '.2f')
-        logger.info(f'====> Epoch: {epoch}, cost {durtaion} s')
+        logger.info(f'====> Epoch: {epoch}, cost {durtaion} s, loss/g/total: {loss_gen_all}, loss/d/total: {loss_disc_all}, learning_rate: {lr}')
         start_time = now
 
 
